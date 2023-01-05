@@ -133,7 +133,7 @@ async function chainedRequests()  {
     
     //Step 2
     .then((data)=>{
-        let someValue=JSON.parse(data).someValue //extract something from the previous response
+        let someValue=data.someValue //extract something from the previous response
         let request = {
             url: `https://run.mocky.io/v3/bf28f8c4-dd0b-4fab-9689-8022632d5c8d?someValue=${someValue}`, //construct url appropriately
             method: 'GET',
